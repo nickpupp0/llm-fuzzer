@@ -2,9 +2,9 @@
 
 ## Overview
 
-**Prompt Mutator** is a lightweight Python CLI tool designed for **AI / LLM security research**, **prompt injection testing**, and **CTF-style training**.
+**Prompt Mutator** is a lightweight Python CLI tool designed for AI / LLM security research, prompt injection testing, and CTF-style training.
 
-The tool takes an input prompt and generates **mutated adversarial variants** using OpenAI via LangChain. Mutations are controlled using:
+The tool takes an input prompt and generates mutated adversarial variants using OpenAI via LangChain. Mutations are controlled using:
 
 - **Temperature** – to influence creativity and chaos
 - **Keyword steering** – to inject specific concepts into the mutated prompt
@@ -46,3 +46,4 @@ prompt-mutator/
 ├── README.md          
 ├── .env               
 └── .gitignore
+
