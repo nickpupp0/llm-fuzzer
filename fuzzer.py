@@ -9,24 +9,14 @@ warnings.filterwarnings("ignore", category=UserWarning, module="langchain_core._
 from langchain_openai import ChatOpenAI
 from langchain_core.prompts import ChatPromptTemplate
 
-
-# -----------------------------
 # Suppress non-critical warnings
-# -----------------------------
 warnings.filterwarnings("ignore")
 
-
-# -----------------------------
 # Load environment variables
-# -----------------------------
 _ = load_dotenv(find_dotenv())
-
 API_KEY = os.environ.get("OPENAI_API_KEY")
 
-
-# -----------------------------
 # Prompt mutation logic
-# -----------------------------
 def mutate_prompt(prompt: str, temperature: float, keywords: list[str]) -> str:
     if not API_KEY:
         raise ValueError("OPENAI_API_KEY is missing")
@@ -73,10 +63,7 @@ Original instruction:
 
     return response.content.strip()
 
-
-# -----------------------------
 # CLI
-# -----------------------------
 def main():
     parser = argparse.ArgumentParser(
         description="Prompt mutation tool using OpenAI + LangChain"
